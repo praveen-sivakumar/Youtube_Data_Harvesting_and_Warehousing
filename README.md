@@ -5,12 +5,14 @@ It takes channel ID as input and with the help of google api it fetches the chan
 Then it migrates the data from mongodb to mysql in which it is in a structured format.
 
 1.Tools USED
+
 Virtual code.
 Python 3.11.0 
 MySQL.
 MongoDB.
 Youtube API key.
-2. Libraries Installed.
+
+2. Libraries Installed
 !pip install googleapiclient
 !pip install pymongo
 !pip install mysql-connector-python 
