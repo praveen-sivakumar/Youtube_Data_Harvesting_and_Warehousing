@@ -1,61 +1,27 @@
 # Youtube_Data_Harvesting_and_Warehousing
-A Streamlit application that allows users to access and analyze data from multiple YouTube channel.
 
-1.Tools
+A Streamlit application that allows users to access and analyze data from multiple YouTube channel.
+It takes channel ID as input and with the help of google api it fetches the channel's data and store it in a db in mongodb. In mongodb it is an unstructured format.
+Then it migrates the data from mongodb to mysql in which it is in a structured format.
+
+1.Tools USED
 Virtual code.
-Jupyter notebook.
-Python 3.11.0 or higher.
+Python 3.11.0 
 MySQL.
 MongoDB.
 Youtube API key.
-2.Requirement Libraries to Install
-pip install google-api-python-client, pymongo, mysql-connector-python, sqlalchemy, pymysql, pymysql, pandas, numpy, plotly-express, streamlit.
-( pip install google-api-python-client pymongo mysql-connector-python sqlalchemy pymysql pandas numpy plotly-express streamlit )
+2. Libraries Installed.
+!pip install googleapiclient
+!pip install pymongo
+!pip install mysql-connector-python 
+!pip install sqlalchemy 
+!pip install pandas
+!pip install streamlit
 
-3.Import Libraries
-Youtube API libraries
-
-import googleapiclient.discovery
-from googleapiclient.discovery import build
-File handling libraries
-
-import json
-import re
-MongoDB
-
-import pymongo
-SQL libraries
-
-import mysql.connector
-import sqlalchemy
-from sqlalchemy import create_engine
-import pymysql
-pandas, numpy
-
-import pandas as pd
-import numpy as np
-Dash board libraries
-
-import streamlit as st
-import plotly.express as px
-4. E T L Process
+4. ETL (Extract Transform Load) Process
 a) Extract data
-Extract the particular youtube channel data by using the youtube channel id, with the help of the youtube API developer console.
+With the help of channel Id of a youtube channel and youtube API developer console we are extracting data.
 b) Process and Transform the data
-After the extraction process, takes the required details from the extraction data and transforms it into JSON format.
+After the extraction process, take the required details from the extracted data and transformed to JSON Format.
 c) Load data
-After the transformation process, the JSON format data is stored in the MongoDB database, also It has the option to migrate the data to MySQL database from the MongoDB database.
-5. E D A Process and Framework
-a) Access MySQL DB
-Create a connection to the MySQL server and access the specified MySQL DataBase by using pymysql library and access tables.
-b) Filter the data
-Filter and process the collected data from the tables depending on the given requirements by using SQL queries and transform the processed data into a DataFrame format.
-c) Visualization
-Finally, create a Dashboard by using Streamlit and give dropdown options on the Dashboard to the user and select a question from that menu to analyse the data and show the output in Dataframe Table and Bar chart.
-User Guide
-Step 1. Data collection zone
-Search channel_id, copy and paste on the input box and click the Get data and stored button in the Data collection zone.
-Step 2. Data Migrate zone
-Select the channel name and click the Migrate to MySQL button to migrate the specific channel data to the MySQL database from MongoDB in the Data Migrate zone.
-Step 3. Channel Data Analysis zone
-Select a Question from the dropdown option you can get the results in Dataframe format or bar chat format.
+Transformed data is first stored as JSON format in MongoDb and from it is migrated to MysQL AS structured data.
