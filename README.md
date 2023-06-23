@@ -4,7 +4,7 @@ A Streamlit application that allows users to access and analyze data from multip
 It takes channel ID as input and with the help of google api it fetches the channel's data and store it in a db in mongodb. In mongodb it is an unstructured format.
 Then it migrates the data from mongodb to mysql in which it is in a structured format.
 
-1.Tools USED
+# 1.Tools USED
 
   Virtual code.
   
