@@ -17,7 +17,7 @@ Then it migrates the data from mongodb to mysql in which it is in a structured f
   Youtube API key.
   
 
-2. Libraries Installed
+# 2. Libraries Installed
  
   !pip install googleapiclient
   
@@ -31,7 +31,7 @@ Then it migrates the data from mongodb to mysql in which it is in a structured f
   
   !pip install streamlit
 
-3. ETL (Extract Transform Load) Process
+# 3. ETL (Extract Transform Load) Process
  
   a) Extract data
   
